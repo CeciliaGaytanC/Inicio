@@ -4,6 +4,7 @@ import 'dart:convert';
 import 'package:flutter/cupertino.dart';
 
 import 'Registro.dart';
+import 'Principal.dart';
 //import 'package:shared_preferences/shared_preferences.dart';
 //import 'package:cookmenu/Registro';
 
@@ -152,13 +153,28 @@ class _MyHomePageState extends State<MyHomePage> {
                   onPressed: () {
                     print(nameController.text);
                     print(passwordController.text);
-                     if (_formKey.currentState!.validate()) {
+                    if (_formKey.currentState!.validate()) {
+                          Navigator.push(
+          context,
+          MaterialPageRoute(
+              builder: (context) => Principal()));
                  // Si el formulario es válido, queremos mostrar un Snackbar
-                  Scaffold.of(context)
-                      .showSnackBar(SnackBar(content: Text('Por favor, Ingresa los datos. Hay campos vacios')));
-                }
-       
+                  } else{
+                   Scaffold.of(context)
+                      .showSnackBar(SnackBar(
+                        content: Text('Por favor, Ingresa los datos. Hay campos vacios'),
+                         backgroundColor: Colors.green,
+                          //width: 600,
+                       shape: StadiumBorder(),
+                       elevation: 560,
+                     //   comportamiento: SnackBarBehavior.floating;
+                        ));
+                     
+                       
+             
+ }
 
+           
                   },
                 )
             ),

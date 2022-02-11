@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
 
-class Registro extends StatefulWidget {
+class Principal extends StatefulWidget {
 
  @override
-  _RegistroState createState() => _RegistroState();
+  _PrincipalState createState() => _PrincipalState();
 }
 
-class _RegistroState extends State<Registro> {
+class _PrincipalState extends State<Principal> {
   TextEditingController _nameTextController = TextEditingController();
 
   bool _isLoading = true;
@@ -17,7 +17,7 @@ class _RegistroState extends State<Registro> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Registro'),
+          title: Text('Principal'),
           actions: <Widget>[
             Padding(
               padding: const EdgeInsets.only(
@@ -33,4 +33,8 @@ class _RegistroState extends State<Registro> {
         );
   }
 
+  _saveDataToServer() {
+  }
 }
+
+
