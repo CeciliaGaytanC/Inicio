@@ -14,7 +14,7 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
- static const String _title = 'CookApp';
+ static const String _title = '';
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -71,16 +71,27 @@ class _MyHomePageState extends State<MyHomePage> {
        // padding: const EdgeInsets.all(10),
         child: ListView(
           children: <Widget>[
-            Container(
-                alignment: Alignment.center,
-                padding: const EdgeInsets.all(46),
-                child: const Text(
-                  'CookApp',
-                  style: TextStyle(
-                      color: Colors.blue,
-                      fontWeight: FontWeight.w500,
-                      fontSize: 30),
-                )),
+          
+                Container(
+                   alignment: Alignment.center,
+                   child: Text(
+      'CookApp',
+      style: TextStyle(
+        fontSize: 32,
+        color: Colors.white,
+      ),
+    ),
+                   padding: const EdgeInsets.all(46),
+  margin: EdgeInsets.all(30),
+  
+  decoration: BoxDecoration(
+    
+    color: Colors.blue,
+    shape: BoxShape.circle,
+  ),
+  width: 150,
+  height: 150,
+),
             Container(
                 alignment: Alignment.center,
                 padding: const EdgeInsets.all(10),
@@ -88,6 +99,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   'Inicia Sesion',
                   style: TextStyle(fontSize: 20),
                 )),
+                
+
+
+
             Padding (
               // key: _formKey,
               padding: const EdgeInsets.all(10),
