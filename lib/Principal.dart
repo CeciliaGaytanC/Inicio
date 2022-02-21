@@ -35,6 +35,7 @@ class Principal extends StatelessWidget {
   //margin: EdgeInsets.all(30),
                    // alignment: Alignment.center,
                   minWidth: 200.0,
+                  
                   height: 80.0,
                   onPressed: () {},
                   color: Colors.lightBlue,
