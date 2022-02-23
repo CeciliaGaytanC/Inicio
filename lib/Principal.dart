@@ -26,7 +26,8 @@ class Principal extends StatelessWidget {
                 //alignment: Alignment.center,
                 //Text("Selecciona el tema de receta"),
                 child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
 
               // mainAxisAlignment: MainAxisAlignment.spaceEvenly,dgeInsets.fromLTRB(left, top, right, bottom)
               //mainAxisAlignment: MainAxisAlignment.start,
@@ -34,51 +35,150 @@ class Principal extends StatelessWidget {
                 //Text("Curso en CodeIgniter"),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    _boton("Desayuno"),
-                   _boton("Comida")],
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [_boton1("Desayuno"), _boton2("Comida")],
                 ),
                 Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                _boton("Cena"),
-                _boton("Postres")
-              ],
-            ),
-              
-              
-                MaterialButton(
-                  padding: const EdgeInsets.all(46),
-                  //margin: EdgeInsets.all(30),
-                  // alignment: Alignment.center,
-                  minWidth: 200.0,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  // crossAxisAlignment: CrossAxisAlignment.center,
 
-                  height: 80.0,
-                  onPressed: () {},
-                  color: Colors.lightBlue,
-                  child:
-                      Text('Desayuno', style: TextStyle(color: Colors.white)),
+                  children: [
+                    _boton3("Cena     "),
+                    _boton4("Bebidas"),
+                  ],
                 ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  // crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    _boton5("Postres"),
+                    _boton6("Otros   "),
+                  ],
+                )
               ],
             )),
           ),
         ));
   }
 }
- Widget _boton(String texto) {
-  return RaisedButton( 
-      child:Text(texto, style: TextStyle(color: Colors.black),),
-      color: Colors.teal[100],
-      elevation: 5,
-      padding: EdgeInsets.all(50),
-      shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10.0),
-          side: BorderSide(color: Colors.teal),
-      ),
-      onPressed: ()=>{
-        // use pageroute para lanzar a otra ventana
-        print("BOTON: " +texto)
-      },
+
+Widget _boton1(String texto) {
+  return MaterialButton(
+    child: Text(
+      texto,
+      style: TextStyle(color: Colors.black),
+    ),
+ color: Colors.orange[100],
+    elevation: 1,
+    padding: EdgeInsets.all(60),
+    shape: RoundedRectangleBorder(
+     borderRadius: BorderRadius.circular(5.0),
+    side: BorderSide(color: Colors.black),
+  ),
+  onPressed: () {
+ 
+}
+      
+  );
+}
+
+Widget _boton2(String texto) {
+  return MaterialButton(
+    child: Text(
+      texto,
+      style: TextStyle(color: Colors.black),
+    ),
+    color: Colors.teal[100],
+    elevation: 1,
+    padding: EdgeInsets.all(60),
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(5.0),
+      side: BorderSide(color: Colors.black),
+    ),
+    onPressed: () => {
+      // use pageroute para lanzar a otra ventana
+      print("BOTON: " + texto)
+    },
+  );
+}
+
+Widget _boton3(String texto) {
+  return MaterialButton(
+    child: Text(
+      texto,
+      style: TextStyle(color: Colors.black),
+    ),
+    color: Colors.purple[100],
+    elevation: 1,
+    padding: EdgeInsets.all(60),
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(5.0),
+      side: BorderSide(color: Colors.black),
+    ),
+    onPressed: () => {
+      // use pageroute para lanzar a otra ventana
+      print("BOTON: " + texto)
+    },
+  );
+}
+
+Widget _boton4(String texto) {
+  return MaterialButton(
+    child: Text(
+      texto,
+      style: TextStyle(color: Colors.black),
+    ),
+    color: Colors.teal[100],
+    elevation: 1,
+    padding: EdgeInsets.all(60),
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(5.0),
+      side: BorderSide(color: Colors.black),
+    ),
+    onPressed: () => {
+      // use pageroute para lanzar a otra ventana
+      print("BOTON: " + texto)
+    },
+  );
+}
+
+Widget _boton5(String texto) {
+  return MaterialButton(
+    child: Text(
+      texto,
+      style: TextStyle(color: Colors.black),
+    ),
+    color: Colors.pink[100],
+    elevation: 1,
+    padding: EdgeInsets.all(60),
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(5.0),
+      side: BorderSide(color: Colors.black),
+    ),
+    onPressed: () => {
+      // use pageroute para lanzar a otra ventana
+      print("BOTON: " + texto)
+    },
+  );
+}
+
+Widget _boton6(String texto) {
+  return MaterialButton(
+    child: Text(
+      texto,
+      style: TextStyle(color: Colors.black),
+    ),
+    color: Colors.green[100],
+    elevation: 1,
+    padding: EdgeInsets.all(60),
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.circular(5.0),
+      side: BorderSide(color: Colors.black),
+    ),
+    onPressed: () => {
+      // use pageroute para lanzar a otra ventana
+      print("BOTON: " + texto)
+    },
   );
 }
 

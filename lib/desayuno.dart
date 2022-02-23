@@ -2,9 +2,9 @@ import 'package:cookmenu/BotonesInicio';
 //import 'package:cookmenu/desayuno';
 import 'package:flutter/material.dart';
 
-void main() => runApp(Principal());
+void main() => runApp(Desayuno());
 
-class Principal extends StatelessWidget {
+class Desayuno extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
