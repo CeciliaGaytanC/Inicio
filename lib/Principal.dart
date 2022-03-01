@@ -128,7 +128,7 @@ Widget _boton4(String texto) {
       texto,
       style: TextStyle(color: Colors.black),
     ),
-    color: Colors.teal[100],
+    color: Colors.yellow[100],
     elevation: 1,
     padding: EdgeInsets.all(60),
     shape: RoundedRectangleBorder(

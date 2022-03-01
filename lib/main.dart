@@ -147,7 +147,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 height: 50,
                 padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
                 child: ElevatedButton(
-                  child: const Text('Iniciar Sesion'),
+                  child: const Text('Iniciar Sesión'),
                   onPressed: () {
                     print(nameController.text);
                     print(passwordController.text);
