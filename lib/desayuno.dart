@@ -63,18 +63,7 @@ class Desayuno extends StatelessWidget {
                   child: const Text("Postres"),
                   color: Colors.blue[100],
                 ),
-                MaterialButton(
-                  padding: const EdgeInsets.all(46),
-                  //margin: EdgeInsets.all(30),
-                  // alignment: Alignment.center,
-                  minWidth: 200.0,
-
-                  height: 80.0,
-                  onPressed: () {},
-                  color: Colors.lightBlue,
-                  child:
-                      Text('Desayuno', style: TextStyle(color: Colors.white)),
-                ),
+               
               ],
             )),
           ),
