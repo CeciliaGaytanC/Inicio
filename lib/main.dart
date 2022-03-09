@@ -1,4 +1,5 @@
 import 'package:cookmenu/desayuno.dart';
+import 'package:cookmenu/navegacion.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'dart:convert';
@@ -154,7 +155,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     print(passwordController.text);
                     if (_formKey.currentState!.validate()) {
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Principal()));
+                          MaterialPageRoute(builder: (context) => HomePage()));
                       // Si el formulario es válido, queremos mostrar un Snackbar
                     } else {
                       Scaffold.of(context).showSnackBar(SnackBar(

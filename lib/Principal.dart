@@ -27,9 +27,10 @@ class _PrincipalState extends State<Principal> {
         ),
 home: Scaffold(
           appBar: AppBar(
-            title: Text("Selecciona el tema de receta"),
+            title: Text("Selecciona el tema de recetas"),
           ),
           drawer: MenuLateral(),
+
       body: Container(
         
         //width: double.infinity,
@@ -42,6 +43,7 @@ home: Scaffold(
                   //crossAxisAlignment: CrossAxisAlignment.start,
                   children: [_boton1("Desayuno"), _boton2("Comida")],
                 ),
+                
                  Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   // crossAxisAlignment: CrossAxisAlignment.center,
