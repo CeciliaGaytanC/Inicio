@@ -70,7 +70,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Container(
               alignment: Alignment.center,
               child: Text(
-                'CookApp',
+                'CookArt',
                 style: TextStyle(
                   fontSize: 32,
                   color: Colors.white,

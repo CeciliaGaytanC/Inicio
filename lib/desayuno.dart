@@ -1,7 +1,7 @@
 import 'package:cookmenu/BotonesInicio';
 //import 'package:cookmenu/desayuno';
 import 'package:flutter/material.dart';
-
+import 'package:flutter/services.dart';
 void main() => runApp(Desayuno());
 
 class Desayuno extends StatelessWidget {
@@ -80,7 +80,7 @@ class MenuLateral extends StatelessWidget {
           new UserAccountsDrawerHeader(
             //: Text("Bienvenido"),
 
-            accountName: Text("CODEA APP"),
+            accountName: Text("CookArt"),
       //        title: Text('${widget.destination.title} Text'),
       //  backgroundColor: widget.destination.color,
             //leading: const Icon(Icons.menu).
@@ -92,18 +92,22 @@ class MenuLateral extends StatelessWidget {
           Ink(
             color: Colors.green[300],
             child: new ListTile(
-              leading: const Icon(Icons.local_cafe),
+              leading: const Icon(Icons.person, color:Colors.blue),
               title: Text(
-                "Desayuno",
-                style: TextStyle(color: Colors.white),
+                "Perfil",
+                style: TextStyle(color: Colors.black),
               ),
             ),
           ),
+          Divider(color: Colors.green),
           new ListTile(
-            title: Text("Comida"),
-            //  color: Colors.green[300],
-
-            leading: const Icon(Icons.lunch_dining),
+            dense:true,
+            focusColor:  Colors.yellow,
+            title: const Text("Inicio",
+            //style: styleDrawer,
+            ),
+            leading:  Icon(Icons.home, color:Colors.blue),
+            
             onTap: () {
               print("Hola");
             },
@@ -111,22 +115,19 @@ class MenuLateral extends StatelessWidget {
               print('longPress');
             },
           ),
-          new ListTile(
-            title: Text("Cena"),
-            leading: Icon(Icons.set_meal),
-          ),
-          new ListTile(
-            title: Text("Postres"),
-            leading: Icon(Icons.icecream),
-          ),
+         
+       
+        
           new ListTile(
             title: Text("Configuraciones"),
             leading: Icon(Icons.settings),
           ),
+        
           new ListTile(
             title: Text("Perfil"),
             leading: Icon(Icons.person),
           ),
+         
           new ListTile(
             title: Text("Salir"),
             leading: Icon(Icons.west),
