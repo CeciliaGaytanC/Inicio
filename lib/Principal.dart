@@ -1,5 +1,6 @@
 import 'package:cookmenu/BotonesInicio';
 import 'package:cookmenu/desayuno.dart';
+//import 'package:cookmenu/navegacion';
 import 'package:flutter/material.dart';
 import 'package:flutter/semantics.dart';
 
@@ -8,6 +9,7 @@ import 'dart:convert';
 import 'package:flutter/cupertino.dart';
 
 import 'desayuno.dart';
+import 'galeria.dart';
 
 class Principal extends StatefulWidget {
   const Principal({Key? key}) : super(key: key);
@@ -89,7 +91,7 @@ home: Scaffold(
       onPressed: () {
         Navigator.push(
           context, 
-          MaterialPageRoute(builder: (context) => Desayuno()),
+          MaterialPageRoute(builder: (context) => BotonBarraNavegacion()),
         );
       },
     );

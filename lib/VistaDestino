@@ -9,7 +9,7 @@ import 'dart:convert';
 import 'package:flutter/cupertino.dart';
 
 import 'desayuno.dart';
-import 'navegacion.dart';
+import 'navegacion';
 
 class DestinationView extends StatefulWidget {
   const DestinationView({ Key? key, required this.destination }) : super(key: key);

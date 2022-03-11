@@ -81,6 +81,8 @@ class MenuLateral extends StatelessWidget {
             //: Text("Bienvenido"),
 
             accountName: Text("CODEA APP"),
+      //        title: Text('${widget.destination.title} Text'),
+      //  backgroundColor: widget.destination.color,
             //leading: const Icon(Icons.menu).
             accountEmail: Text("informes@gmail.com"),
             decoration: BoxDecoration(
