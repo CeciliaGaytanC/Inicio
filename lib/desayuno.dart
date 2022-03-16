@@ -16,9 +16,9 @@ class Desayuno extends StatelessWidget {
         ),
         home: Scaffold(
           appBar: AppBar(
-            title: Text("Selecciona el tema de receta"),
+            title: Text("Selecciona una  receta"),
           ),
-          drawer: MenuLateral(),
+       //   drawer: MenuLateral(),
           body: Card(
             // child: Text("HOMEeeee"),
             //
@@ -67,81 +67,9 @@ class Desayuno extends StatelessWidget {
               ],
             )),
           ),
-        ));
-  }
-}
-
-class MenuLateral extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return new Drawer(
-      child: ListView(
-        children: <Widget>[
-          new UserAccountsDrawerHeader(
-            //: Text("Bienvenido"),
-
-            accountName: Text("CookArt"),
-      //        title: Text('${widget.destination.title} Text'),
-      //  backgroundColor: widget.destination.color,
-            //leading: const Icon(Icons.menu).
-            accountEmail: Text("informes@gmail.com"),
-            decoration: BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage(
-              'images/fondo.png'),
-          fit: BoxFit.fill,
-        ),
-        shape: BoxShape.circle,
-      ),
-           // decoration: BoxDecoration(
-             // color: Colors.blue,
-            //),
-          ),
-          Ink(
-            color: Colors.green[300],
-            child: new ListTile(
-              leading: const Icon(Icons.person, color:Colors.blue),
-              title: Text(
-                "Perfil",
-                style: TextStyle(color: Colors.black),
-              ),
-            ),
-          ),
-          Divider(color: Colors.green),
-          new ListTile(
-            dense:true,
-            focusColor:  Colors.yellow,
-            title: const Text("Inicio",
-            //style: styleDrawer,
-            ),
-            leading:  Icon(Icons.home, color:Colors.blue),
-            
-            onTap: () {
-              print("Hola");
-            },
-            onLongPress: () {
-              print('longPress');
-            },
-          ),
-         
-       
+        )
         
-          new ListTile(
-            title: Text("Configuraciones"),
-            leading: Icon(Icons.settings),
-          ),
-        
-          new ListTile(
-            title: Text("Perfil"),
-            leading: Icon(Icons.person),
-          ),
-         
-          new ListTile(
-            title: Text("Salir"),
-            leading: Icon(Icons.west),
-          ),
-        ],
-      ),
-    );
+        );
   }
+  
 }

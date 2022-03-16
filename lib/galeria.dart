@@ -28,6 +28,66 @@ class _BotonBarraNavegacionState extends State<BotonBarraNavegacion> {
   
     return Scaffold(
       backgroundColor: Colors.white,
+       appBar: AppBar(
+            title: Text("Selecciona una  recetass"),
+          ),
+  body: 
+   Card(
+            // child: Text("HOMEeeee"),
+            //
+            child: Center(
+                //alignment: Alignment.center,
+          //Text("Selecciona el tema de receta"),
+                child: GridView.count(
+              //margin: E
+              primary: false,
+              padding: const EdgeInsets.all(20),
+              crossAxisSpacing: 10,
+              mainAxisSpacing: 10,
+              crossAxisCount: 2,
+              // mainAxisAlignment: MainAxisAlignment.spaceEvenly,dgeInsets.fromLTRB(left, top, right, bottom)
+              //mainAxisAlignment: MainAxisAlignment.start,
+              children: <Widget>[
+                //Text("Curso en CodeIgniter"),
+
+                Container(
+                  padding: const EdgeInsets.all(8),
+                  child: const Text("Desayuno"),
+                  color: Colors.teal[100],
+                ),
+                Container(
+                  padding: const EdgeInsets.all(8),
+                  child: const Text("Comida"),
+                  color: Colors.pink[100],
+                ),
+                Container(
+                  padding: const EdgeInsets.all(8),
+                  child: const Text("Cena"),
+                  color: Colors.green[100],
+
+                ),
+                Container(
+                  padding:  const EdgeInsets.all(8),
+                  child: const Text("Bebidas"),
+                  color: Colors.orange[100],
+                ),
+                Container(
+                  padding: const EdgeInsets.all(8),
+                  child: const Text("Postres"),
+                  color: Colors.blue[100],
+                ),
+                 Container(
+                  padding: const EdgeInsets.all(8),
+                  child: const Text("Otros"),
+                  color: Colors.red[100],
+                ),
+               
+              ],
+            )),
+          ),
+          
+
+      
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _selectedIndex,
         showSelectedLabels: true,
@@ -98,7 +158,7 @@ class _BotonBarraNavegacionState extends State<BotonBarraNavegacion> {
           });
         },
       ),
-      body: _widgetOptions.elementAt(_selectedIndex),
+     // body: _widgetOptions.elementAt(_selectedIndex),
     );
   }
 
@@ -108,20 +168,69 @@ class Favorito extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      color: Colors.red,
-      child: Center(
-        child: FlatButton(
-          onPressed: (){
-            Navigator.push(context, MaterialPageRoute(
-                builder: (context) => Desayuno()
-            ));
-          },
-          child: Text('Hola'),
-          color: Colors.white,
+ 
+   return MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
         ),
-      ),
-    );
+        home: Scaffold(
+          appBar: AppBar(
+            title: Text("Selecciona una  receta"),
+          ),
+       //   drawer: MenuLateral(),
+          body: Card(
+            // child: Text("HOMEeeee"),
+            //
+            child: Center(
+                //alignment: Alignment.center,
+          //Text("Selecciona el tema de receta"),
+                child: GridView.count(
+              //margin: E
+              primary: false,
+              padding: const EdgeInsets.all(20),
+              crossAxisSpacing: 10,
+              mainAxisSpacing: 10,
+              crossAxisCount: 2,
+              // mainAxisAlignment: MainAxisAlignment.spaceEvenly,dgeInsets.fromLTRB(left, top, right, bottom)
+              //mainAxisAlignment: MainAxisAlignment.start,
+              children: <Widget>[
+                //Text("Curso en CodeIgniter"),
+
+                Container(
+                  padding: const EdgeInsets.all(8),
+                  child: const Text("Desayuno"),
+                  color: Colors.teal[100],
+                ),
+                Container(
+                  padding: const EdgeInsets.all(8),
+                  child: const Text("Comida"),
+                  color: Colors.pink[100],
+                ),
+                Container(
+                  padding: const EdgeInsets.all(8),
+                  child: const Text("Cena"),
+                  color: Colors.green[100],
+
+                ),
+                Container(
+                  padding:  const EdgeInsets.all(8),
+                  child: const Text("Bebidas"),
+                  color: Colors.orange[100],
+                ),
+                Container(
+                  padding: const EdgeInsets.all(8),
+                  child: const Text("Postres"),
+                  color: Colors.blue[100],
+                ),
+               
+              ],
+            )),
+          ),
+        )
+        
+        );
   }
 }
 
