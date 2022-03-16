@@ -86,8 +86,16 @@ class MenuLateral extends StatelessWidget {
             //leading: const Icon(Icons.menu).
             accountEmail: Text("informes@gmail.com"),
             decoration: BoxDecoration(
-              color: Colors.blue,
-            ),
+        image: DecorationImage(
+          image: AssetImage(
+              'images/fondo.png'),
+          fit: BoxFit.fill,
+        ),
+        shape: BoxShape.circle,
+      ),
+           // decoration: BoxDecoration(
+             // color: Colors.blue,
+            //),
           ),
           Ink(
             color: Colors.green[300],
